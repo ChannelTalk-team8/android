@@ -51,12 +51,19 @@ public class SuggestAdapter extends BaseAdapter {
         TextView txv_ratehuman = v.findViewById(R.id.suggest_ratehuman);
         TextView txv_propri = v.findViewById(R.id.suggest_propri);
         ImageView img_person = v.findViewById(R.id.personpic);
-        if(i==0)
+        ImageView img_notebook = v.findViewById(R.id.suggest_imglink);
+        if(i==0) {
             img_person.setImageResource(R.drawable.monogram_a);
-        if(i==1)
+            img_notebook.setImageResource(R.drawable.mac_image);
+        }
+        if(i==1) {
             img_person.setImageResource(R.drawable.monogram_b);
-        if(i==2)
+            img_notebook.setImageResource(R.drawable.gram_image);
+        }
+        if(i==2) {
             img_person.setImageResource(R.drawable.monogram_c);
+            img_notebook.setImageResource(R.drawable.galaxy_image);
+        }
         txv_name.setText(suggestDataArrayList.get(i).getName());
         txv_ratehuman.setText("★"+suggestDataArrayList.get(i).getRate()+"("+suggestDataArrayList.get(i).getHuman()+")");
         txv_propri.setText(suggestDataArrayList.get(i).getProduct()+"\n"+suggestDataArrayList.get(i).getPrice());

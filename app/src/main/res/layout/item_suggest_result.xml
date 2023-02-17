@@ -42,7 +42,7 @@
             android:layout_marginTop="16dp"
             android:text="APPLE 맥북에어\n1,434,370원"
             android:id="@+id/suggest_propri"
-            android:textAlignment="textEnd"/>
+            android:textAlignment="textStart"/>
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
