@@ -1,19 +1,19 @@
 package com.example.android;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ReviewActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Review2Activity extends AppCompatActivity {
 
     ImageView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommender_a_profile);
+        setContentView(R.layout.activity_recommender_b_profile);
 
         btnBack = findViewById(R.id.back_button);
 
