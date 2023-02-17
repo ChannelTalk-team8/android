@@ -47,27 +47,39 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<ArrayList<Cateslot_child>> cateslot_children = new ArrayList<>();
 
         Cateslot aaa = new Cateslot();
-        aaa.setBig("test1");
+        aaa.setBig("전자기기");
 
         ArrayList<Cateslot_child> cateslotChildArrayList1 =new ArrayList<>();
-        cateslotChildArrayList1.add(new Cateslot_child("test2"));
-        cateslotChildArrayList1.add(new Cateslot_child("test3"));
-        cateslotChildArrayList1.add(new Cateslot_child("test4"));
-        cateslotChildArrayList1.add(new Cateslot_child("test5"));
+        cateslotChildArrayList1.add(new Cateslot_child("노트북"));
+        cateslotChildArrayList1.add(new Cateslot_child("조립 PC"));
+        cateslotChildArrayList1.add(new Cateslot_child("TV"));
+        cateslotChildArrayList1.add(new Cateslot_child("가전"));
         cateslot_children.add(cateslotChildArrayList1);
 
         Cateslot bbb = new Cateslot();
-        bbb.setBig("test5");
+        bbb.setBig("가구");
 
         ArrayList<Cateslot_child> cateslotChildArrayList2 =new ArrayList<>();
-        cateslotChildArrayList2.add(new Cateslot_child("test4"));
-        cateslotChildArrayList2.add(new Cateslot_child("test3"));
-        cateslotChildArrayList2.add(new Cateslot_child("test2"));
-        cateslotChildArrayList2.add(new Cateslot_child("test1"));
+        cateslotChildArrayList2.add(new Cateslot_child("소파"));
+        cateslotChildArrayList2.add(new Cateslot_child("세탁기"));
+        cateslotChildArrayList2.add(new Cateslot_child("냉장고"));
+        cateslotChildArrayList2.add(new Cateslot_child("TV"));
         cateslot_children.add(cateslotChildArrayList2);
+
+        Cateslot ccc = new Cateslot();
+        ccc.setBig("명품");
+
+        ArrayList<Cateslot_child> cateslotChildArrayList3 =new ArrayList<>();
+        cateslotChildArrayList3.add(new Cateslot_child("구찌"));
+        cateslotChildArrayList3.add(new Cateslot_child("루이비통"));
+        cateslotChildArrayList3.add(new Cateslot_child("입생로랑"));
+        cateslotChildArrayList3.add(new Cateslot_child("샤넬"));
+        cateslotChildArrayList3.add(new Cateslot_child("에르메스"));
+        cateslot_children.add(cateslotChildArrayList3);
 
         cateslots.add(aaa);
         cateslots.add(bbb);
+        cateslots.add(ccc);
         mainAdapter.setCateslot_children(cateslot_children);
         mainAdapter.setCateslots(cateslots);
         mainAdapter.notifyDataSetChanged();
