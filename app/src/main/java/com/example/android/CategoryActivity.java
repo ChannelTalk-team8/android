@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,12 +20,14 @@ public class CategoryActivity extends AppCompatActivity {
     private ChipGroup priceChipGroup;
     private ChipGroup sizeChipGroup;
 
+    private ImageView btnBack;
     private Button btnSearch;
 
     private String selectedPurpose = null;
     private String selectedWeight = null;
     private String selectedPrice = null;
     private String selectedSize = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,18 +155,26 @@ public class CategoryActivity extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(selectedPurpose == null || selectedWeight == null || selectedPrice == null || selectedSize == null) {
-                    Toast.makeText(getApplicationContext(), "선택하지 않은 항목이 있습니다.", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    System.out.println("purpose = " + selectedPurpose);
-                    System.out.println("price = " + selectedWeight);
-                    System.out.println("price = " + selectedPrice);
-                    System.out.println("size = " + selectedSize);
+//                if(selectedPurpose == null || selectedWeight == null || selectedPrice == null || selectedSize == null) {
+//                    Toast.makeText(getApplicationContext(), "선택하지 않은 항목이 있습니다.", Toast.LENGTH_SHORT).show();
+//                }
 
-                    Intent intent = new Intent(CategoryActivity.this, SuggestResult.class);
-                    startActivity(intent);
-                }
+                System.out.println("purpose = " + selectedPurpose);
+                System.out.println("price = " + selectedWeight);
+                System.out.println("price = " + selectedPrice);
+                System.out.println("size = " + selectedSize);
+
+                Intent intent = new Intent(CategoryActivity.this, SuggestResult.class);
+                startActivity(intent);
+            }
+        });
+
+        btnBack = findViewById(R.id.back_button);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
