@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -23,11 +24,23 @@ public class SuggestResult extends AppCompatActivity {
         suggest_lv.setAdapter(suggestAdapter);
         suggestAdapter.notifyDataSetChanged();
 
+        ImageView back_button = findViewById(R.id.back_button);
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         suggest_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 SuggestData suggestData = suggestAdapter.getSuggestDataArrayList().get(i);
-                Intent intent = new Intent(SuggestResult.this,CardActivity.class);
+                Intent intent = null;
+                if(i==0)
+                     intent= new Intent(SuggestResult.this,CardActivity.class);
+                else
+                    intent= new Intent(SuggestResult.this,Card2Activity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +56,7 @@ public class SuggestResult extends AppCompatActivity {
         smp1.setRate("4.9");
         smp1.setHuman("388");
         SuggestData smp2 = new SuggestData();
-        smp2.setName("추천인A");
+        smp2.setName("추천인B");
         smp2.setPrice("1,773,960원");
         smp2.setProduct("LG 그램17");
         smp2.setRate("4.2");

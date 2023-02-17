@@ -33,6 +33,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="20dp"
+            android:id="@+id/personpic"
             android:src="@drawable/monogram"/>
         <TextView
             android:layout_width="wrap_content"

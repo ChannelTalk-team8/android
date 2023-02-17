@@ -35,10 +35,10 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_marginTop="1150dp"
             android:layout_marginBottom="20dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="140dp"
+            android:layout_marginRight="120dp"
             android:backgroundTint="#1c1b1f"
             android:textColor="#d0bcff"
             android:text="보류"
@@ -46,11 +46,11 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="1150dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="60dp"
+            android:layout_marginRight="40dp"
             android:text="구매"
+            android:textStyle="bold"
             android:id="@+id/card_buy"
             android:backgroundTint="#d0bcff"
             android:textColor="#3B1e27" />
