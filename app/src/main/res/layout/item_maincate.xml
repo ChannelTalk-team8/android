@@ -5,5 +5,20 @@
     android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="40dp"
+        android:id="@+id/item_maincatemajor"
+        android:background="@drawable/view_border">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="전자기기"
+            android:id="@+id/maincate_main1"
+            android:textColor="@color/color_secondary"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
 </LinearLayout>
