@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     void startNext(int i){
-        Intent intent = new Intent(MainActivity.this,SuggestResult.class);
+        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
         intent.putExtra("id",i);
         Log.d("test", "startNext: "+i);
         startActivity(intent);
