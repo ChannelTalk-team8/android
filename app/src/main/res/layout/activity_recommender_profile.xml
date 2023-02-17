@@ -115,6 +115,7 @@
                 android:text=
                     "약 15년 간 전자기기를 수집해왔고 현재는 용산 전자상가에서 근무하고 있습니다 오랜 노하우로 최적화된 제품을 추천해드립니다!"
                 android:textSize="15sp"
+                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 app:layout_constraintTop_toBottomOf="@+id/recommender_keyword1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -134,18 +135,36 @@
                 android:layout_marginTop="30dp"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="덕분에 정말 가성비 있는 제품을 알 수 있었습니다 다들 믿고 맡기셔도 좋아요!"
-                android:textSize="15sp"
-                android:layout_marginTop="10dp"
                 app:layout_constraintTop_toBottomOf="@+id/evaluation"
                 app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
                 android:background="@drawable/review_background"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="15dp"
-                />
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★★★★★ 5"
+                    android:id="@+id/star"
+                    android:textSize="15sp"
+                    android:textColor="#FF0000"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="덕분에 정말 가성비 있는 제품을 알 수 있었습니다 다들 믿고 맡기셔도 좋아요!"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@+id/star"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
